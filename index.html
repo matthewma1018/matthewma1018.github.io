@@ -1,7 +1,17 @@
-<!DOCTYPE html>
-<html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
-</body>
-</html>
+---
+layout: default
+title: Home
+menu: no
+---
+<h1 class="page-title">Articles</h1>
+<div class="home">
+<div class="post-list">
+{% for post in site.posts %}
+<a style="text-decoration:none"  href="{{ post.url | prepend: site.baseurl }}">
+      {% include post-cards.html %}
+</a>
+{% endfor %}
+</div>
+</div>
+
+
